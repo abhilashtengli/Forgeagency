@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { easeInOut, motion } from "framer-motion";
 const Content = () => {
+  const [zIdx, setIdx] = useState();
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIdx(0);
+    }, 1000);
+
+    return () => clearTimeout(timeout); // Cleanup function to clear the timeout if component unmounts or effect re-runs
+  }, []);
+
+  const Hover = {
+    scale: 1.2,
+    transition: {
+      duration: 0.3,
+      ease: easeInOut,
+    },
+  };
   return (
     <>
-      <div className=" border-gray-300 rounded-lg w-52 grid place-content-center place-items-center h-fit">
-        <div className="w-48 h-32 border-2 border-gray-200 bg-opacity-50  rounded-lg overflow-hidden">
-          <div className=" h-3 bg-gray-200 border-b border-black flex justify-center items-center">
+      <motion.div className="border-gray-300 rounded-lg w-52 grid place-content-center place-items-center h-fit">
+        <div className="w-48 h-32 border-2 border-gray-200 bg-black bg-opacity-50  rounded-lg overflow-hidden">
+          <div className=" h-3 bg-gray-200 z-10 overflow-hidden border-b border-black flex justify-center items-center">
             <div className="w-7 h-1 border border-black bg-black rounded-full"></div>
           </div>
 
@@ -15,7 +32,22 @@ const Content = () => {
                 "radial-gradient(400% 200% at 50% 0%, transparent 0%, gray 120%)",
             }}
           >
-            <div className=" w-fit h-fit opacity-70 hover:scale-110 transition duration-200 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1">
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: -50,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              whileHover={Hover}
+              transition={{
+                duration: 0.3,
+                ease: "easeIn",
+              }}
+              className=" w-fit h-fit opacity-70 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1"
+            >
               <svg viewBox="0 0 32 32" fill="none" className="w-6 h-6">
                 <rect
                   x="2"
@@ -105,8 +137,25 @@ const Content = () => {
                   </radialGradient>
                 </defs>
               </svg>
-            </div>
-            <div className=" w-fit h-fit opacity-70 hover:scale-110 transition duration-200 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1 p-1">
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: -50,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              whileHover={Hover}
+              transition={{
+                duration: 0.3,
+                ease: "easeIn",
+              }}
+              className={` ${
+                zIdx === 0 ? "z-0 opacity-70" : "-z-10"
+              } w-fit h-fit opacity-70  rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1`}
+            >
               <svg viewBox="0 -4 48 48" version="1.1" class="h-6 w-6">
                 <title>Twitter-color</title>
                 <desc>Created with Sketch.</desc>
@@ -130,8 +179,25 @@ const Content = () => {
                   </g>
                 </g>
               </svg>
-            </div>
-            <div className=" w-fit h-fit opacity-70 hover:scale-110 transition duration-200 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1 p-1">
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: -50,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              whileHover={Hover}
+              transition={{
+                duration: 0.3,
+                ease: "easeIn",
+              }}
+              className={` ${
+                zIdx === 0 ? "z-0" : "-z-10"
+              } w-fit h-fit opacity-70  rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1`}
+            >
               <svg viewBox="0 0 48 48" version="1.1" class="h-6 w-6">
                 <g
                   id="Icons"
@@ -152,8 +218,23 @@ const Content = () => {
                   </g>
                 </g>
               </svg>
-            </div>
-            <div className=" w-fit h-fit opacity-70 hover:scale-110 transition duration-200 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1 p-1">
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: 50,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              whileHover={Hover}
+              transition={{
+                duration: 0.3,
+                ease: "easeIn",
+              }}
+              className=" w-fit h-fit opacity-70  rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1"
+            >
               <svg
                 viewBox="0 0 256 256"
                 xmlns="http://www.w3.org/2000/svg"
@@ -170,8 +251,23 @@ const Content = () => {
                   ></path>
                 </g>
               </svg>
-            </div>
-            <div className=" w-fit h-fit opacity-70 hover:scale-110 transition duration-200 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1 p-1">
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: -50,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              whileHover={Hover}
+              transition={{
+                duration: 0.3,
+                ease: "easeIn",
+              }}
+              className=" w-fit h-fit opacity-70  rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1"
+            >
               <svg viewBox="0 0 48 48" version="1.1" class="h-6 w-6">
                 <g
                   id="Icons"
@@ -192,8 +288,23 @@ const Content = () => {
                   </g>
                 </g>
               </svg>
-            </div>
-            <div className=" w-fit h-fit opacity-70 hover:scale-110 transition duration-200 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1 p-1">
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              whileHover={Hover}
+              transition={{
+                duration: 0.3,
+                ease: "easeIn",
+              }}
+              className=" w-fit h-fit opacity-70 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1"
+            >
               <svg viewBox="0 0 32 32" fill="none" class="w-6 h-6">
                 <rect
                   x="2"
@@ -283,8 +394,23 @@ const Content = () => {
                   </radialGradient>
                 </defs>
               </svg>
-            </div>
-            <div className=" w-fit h-fit opacity-70 hover:scale-110 transition duration-200 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1 p-1">
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              whileHover={Hover}
+              transition={{
+                duration: 0.3,
+                ease: "easeIn",
+              }}
+              className=" w-fit h-fit opacity-70 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1"
+            >
               <svg
                 viewBox="0 0 256 256"
                 xmlns="http://www.w3.org/2000/svg"
@@ -301,8 +427,23 @@ const Content = () => {
                   ></path>
                 </g>
               </svg>
-            </div>
-            <div className=" w-fit h-fit opacity-70 hover:scale-110 transition duration-200 rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1 p-1">
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: 50,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              whileHover={Hover}
+              transition={{
+                duration: 0.3,
+                ease: "easeIn",
+              }}
+              className=" w-fit h-fit opacity-70  rounded-lg border border-gray-500 shadow-[inset_-12px_-8px_90px_#ffffff20] p-1"
+            >
               <svg viewBox="0 -4 48 48" version="1.1" class="h-6 w-6">
                 <title>Twitter-color</title>
                 <desc>Created with Sketch.</desc>
@@ -326,15 +467,11 @@ const Content = () => {
                   </g>
                 </g>
               </svg>
-            </div>
+            </motion.div>
           </div>
         </div>
         <span className="w-[10.5rem] h-1 border-2 border-gray-200 bg-gray-200 rounded-br-sm rounded-bl-sm" />
-
-        <h1 className="font-semibold text-zinc-400 mt-3 text-lg">
-          Content Creation
-        </h1>
-      </div>
+      </motion.div>
     </>
   );
 };

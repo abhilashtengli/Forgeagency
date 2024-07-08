@@ -41,12 +41,32 @@ const Header = () => {
           }}
         >
           <img alt="logo" className="w-14 mb-1 cursor-pointer" src={logo} />
-          <ul className="font-semibold flex w-fit gap-x-10 items-center mt-1">
-            <li className="cursor-pointer">Home</li>
-            <li className="cursor-pointer">Service</li>
-            <li className="cursor-pointer">About</li>
-            <li className="cursor-pointer">Package</li>
-            <li className="cursor-pointer">Contact</li>
+          <ul className="font-semibold flex w-fit gap-x-8 items-center mt-1">
+            <li className="">
+              <h2 className="cursor-pointer border-hidden  py-1 px-2 rounded-md hover:bg-gray-500 hover:bg-opacity-30 hover:border border-gray-600">
+                Home
+              </h2>
+            </li>
+            <li className="">
+              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-gray-500 hover:bg-opacity-30 hover:border border-gray-600">
+                Service
+              </h2>
+            </li>
+            <li className="">
+              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-gray-500 hover:bg-opacity-30 hover:border border-gray-600">
+                About
+              </h2>
+            </li>
+            <li className="">
+              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-gray-500 hover:bg-opacity-30 hover:border border-gray-600">
+                Package
+              </h2>
+            </li>
+            <li className="">
+              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-gray-500 hover:bg-opacity-30 hover:border border-gray-600">
+                Contact
+              </h2>
+            </li>
           </ul>
         </motion.div>
         <motion.div
@@ -64,8 +84,11 @@ const Header = () => {
             scale: 0.9,
           }}
         >
-          <motion.button className="text-sm shadow-2xl shadow-white rounded-full font-semibold text-white bg-emerald-600 px-2 py-1">
-            <div className="flex items-center pl-2">
+          <motion.button
+            className="text-sm rounded-full font-semibold text-white bg-emerald-600 px-3 "
+            style={{ boxShadow: "1px 10px 50px rgba(107, 114, 128, 0.9)" }}
+          >
+            <div className="flex items-center pl-2 text-xs">
               Book a call
               <svg
                 width="16"

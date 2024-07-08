@@ -3,27 +3,39 @@ import Header from "../Header";
 import { motion } from "framer-motion";
 import Content from "./Content";
 const LandingPage = () => {
+  const customStyles = {
+    transform: "translateY(-350px) rotate(-45deg)",
+    width: "560px",
+    height: "1380px",
+    background:
+      "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(0, 0%, 85%, .08) 0, hsla(0, 0%, 55%, .02) 50%, hsla(10, 0%, 45%, 0) 80%)",
+    position: "absolute",
+    top: "0",
+    left: "0",
+  };
   return (
     <div className="relative z-0">
       <Header />
 
       <div className=" w-full h-fit">
+        <div style={customStyles}></div>
+
         <div className="text-white flex flex-col items-center h-screen justify-center pt-5">
           <h1
             className="text-center text-[5rem] font-semibold tracking-wider w-fit rounded-lg px-10"
-            style={{
-              backgroundImage:
-                "radial-gradient(500% 500% at 50% 0%, transparent 0%, gray 250%)",
-            }}
+            // style={{
+            //   backgroundImage:
+            //     "radial-gradient(500% 500% at 50% 0%, transparent 0%, gray 250%)",
+            // }}
           >
             Transform Your
           </h1>
           <h1
             className="text-center text-[5rem] w-fit -mt-2 font-semibold tracking-wider px-10 rounded-lg"
-            style={{
-              backgroundImage:
-                "radial-gradient(400% 500% at 50% 0%, transparent 0%, gray 250%)",
-            }}
+            // style={{
+            //   backgroundImage:
+            //     "radial-gradient(400% 500% at 50% 0%, transparent 0%, gray 250%)",
+            // }}
           >
             Brand with Forge
           </h1>
@@ -39,7 +51,10 @@ const LandingPage = () => {
               scale: 0.9,
             }}
           >
-            <motion.button className="text-sm shadow-2xl shadow-white rounded-full font-semibold text-white bg-emerald-600 px-5 py-2">
+            <motion.button
+              className="text-sm  rounded-full font-semibold text-white bg-emerald-600 px-5 py-2"
+              style={{ boxShadow: "1px 10px 50px rgba(107, 114, 128, 0.9)" }}
+            >
               <div className="flex items-center pl-2">
                 Book a call
                 <svg
@@ -65,9 +80,7 @@ const LandingPage = () => {
             </motion.button>
             <div className="absolute h-[2px] w-20 -bottom-[0.9px] bg-gradient-to-r from-transparent via-red-400 to-transparent"></div>
           </motion.div>
-          <div className="flex justify-center gap-x-44 mt-10">
-            <Content />
-            <Content />
+          <div className=" flex justify-center gap-x-44 mt-10">
             <Content />
           </div>
         </div>
