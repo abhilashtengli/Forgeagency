@@ -20,7 +20,7 @@ const Header = () => {
   }, [prevScrollPos]);
 
   return (
-    <div className="fixed  border-red-500 top-0 w-full flex justify-center z-10 items-center py-5  shadow-md">
+    <div className="fixed  border-red-500 top-0 w-full flex justify-center z-30 items-center py-5  shadow-md">
       <div
         className={`${
           !visible
@@ -43,27 +43,27 @@ const Header = () => {
           <img alt="logo" className="w-14 mb-1 cursor-pointer" src={logo} />
           <ul className="font-semibold flex w-fit gap-x-8 items-center mt-1">
             <li className="">
-              <h2 className="cursor-pointer border-hidden  py-1 px-2 rounded-md hover:bg-gray-500 hover:bg-opacity-30 hover:border border-gray-600">
+              <h2 className="cursor-pointer border-hidden  py-1 px-2 rounded-md hover:bg-emerald-500 hover:bg-opacity-30 hover:border border-gray-600">
                 Home
               </h2>
             </li>
             <li className="">
-              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-gray-500 hover:bg-opacity-30 hover:border border-gray-600">
+              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-emerald-500 hover:bg-opacity-30 hover:border border-gray-600">
                 Service
               </h2>
             </li>
             <li className="">
-              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-gray-500 hover:bg-opacity-30 hover:border border-gray-600">
+              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-emerald-500 hover:bg-opacity-30 hover:border border-gray-600">
                 About
               </h2>
             </li>
             <li className="">
-              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-gray-500 hover:bg-opacity-30 hover:border border-gray-600">
+              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-emerald-500 hover:bg-opacity-30 hover:border border-gray-600">
                 Package
               </h2>
             </li>
             <li className="">
-              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-gray-500 hover:bg-opacity-30 hover:border border-gray-600">
+              <h2 className="cursor-pointer border-hidden   py-1 px-2 rounded-md hover:bg-emerald-500 hover:bg-opacity-30 hover:border border-gray-600">
                 Contact
               </h2>
             </li>

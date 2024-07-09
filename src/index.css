@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.text-gradient-left-to-right {
+    @apply text-transparent;
+
+    /* Specify the gradient colors */
+    background-image: linear-gradient(to right, #ffffff, #4aa085, #ffffff, #ffffff);
+    /* White to emerald-600 */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.text-gradient-right-to-left {
+    @apply text-transparent;
+
+    /* Specify the gradient colors */
+    background-image: linear-gradient(to left, #ffffff, #4aa085, #ffffff, #4aa085, #ffffff );
+    /* White to emerald-600 */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.text-gradient-sm {
+    @apply text-transparent;
+
+    /* Specify the gradient colors */
+    background-image: linear-gradient(to left, #ffffff, #95e4cb, #ffffff, #95e4cb, #ffffff );
+    /* White to emerald-600 */
+    -webkit-background-clip: text;
+    background-clip: text;
+}

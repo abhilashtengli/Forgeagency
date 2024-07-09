@@ -471,6 +471,15 @@ const Content = () => {
           </div>
         </div>
         <span className="w-[10.5rem] h-1 border-2 border-gray-200 bg-gray-200 rounded-br-sm rounded-bl-sm" />
+        <h1
+          className="font-semibold text-gradient-sm"
+          style={{
+            backgroundImage:
+              "radial-gradient(100% 100% at 100% 0%, emerald 0%, white 250%)",
+          }}
+        >
+          Content Creation
+        </h1>
       </motion.div>
     </>
   );

@@ -4,25 +4,38 @@ import { motion } from "framer-motion";
 import Content from "./Content";
 const LandingPage = () => {
   const customStyles = {
-    transform: "translateY(-350px) rotate(-45deg)",
+    transform: "translateY(-350px) rotate(-85deg)",
     width: "560px",
     height: "1380px",
     background:
-      "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(0, 0%, 85%, .08) 0, hsla(0, 0%, 55%, .02) 50%, hsla(10, 0%, 45%, 0) 80%)",
+      "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(158, 64%, 39%, .2) 0, hsla(158, 64%, 39%, .07) 50%, hsla(158, 64%, 39%, 0) 80%)",
     position: "absolute",
     top: "0",
     left: "0",
   };
+  
+  const customStylesRight = {
+    transform: "translateX(-410px) translateY(-350px) rotate(90deg)",
+    width: "560px",
+    height: "1380px",
+    background:
+      "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(158, 64%, 39%, .2) 0, hsla(158, 64%, 39%, .07) 50%, hsla(158, 64%, 39%, 0) 80%)",
+    position: "absolute",
+    top: "0",
+    right: "0",
+  };
+
   return (
     <div className="relative z-0">
       <Header />
 
       <div className=" w-full h-fit">
         <div style={customStyles}></div>
+        <div className="-mr-13" style={customStylesRight}></div>
 
         <div className="text-white flex flex-col items-center h-screen justify-center pt-5">
           <h1
-            className="text-center text-[5rem] font-semibold tracking-wider w-fit rounded-lg px-10"
+            className="text-center text-[5rem] font-semibold tracking-wider w-fit rounded-lg px-10 text-gradient-left-to-right "
             // style={{
             //   backgroundImage:
             //     "radial-gradient(500% 500% at 50% 0%, transparent 0%, gray 250%)",
@@ -31,7 +44,7 @@ const LandingPage = () => {
             Transform Your
           </h1>
           <h1
-            className="text-center text-[5rem] w-fit -mt-2 font-semibold tracking-wider px-10 rounded-lg"
+            className="text-center text-[5rem] w-fit -mt-2 font-semibold tracking-wider px-10 rounded-lg text-gradient-right-to-left"
             // style={{
             //   backgroundImage:
             //     "radial-gradient(400% 500% at 50% 0%, transparent 0%, gray 250%)",
@@ -39,10 +52,10 @@ const LandingPage = () => {
           >
             Brand with Forge
           </h1>
-          <p className="text-2xl text-gray-300 mt-5">
+          <p className="text-2xl text-gray-300 mt-5 z-10">
             Content Creation, Branding & Design, Public Relation
           </p>
-          <p className="text-2xl text-gray-300">
+          <p className="text-2xl text-gray-300 z-10">
             Marketing Automation All in one with Forge
           </p>
           <motion.div
@@ -80,7 +93,7 @@ const LandingPage = () => {
             </motion.button>
             <div className="absolute h-[2px] w-20 -bottom-[0.9px] bg-gradient-to-r from-transparent via-red-400 to-transparent"></div>
           </motion.div>
-          <div className=" flex justify-center gap-x-44 mt-10">
+          <div className="z-10 flex justify-center gap-x-44 mt-10">
             <Content />
           </div>
         </div>
